@@ -44,7 +44,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('http://127.0.0.1:8000/user_base')
+        axios.get('http://127.0.0.1:8000/viewsets_api/user_base')
             .then(response => {
                 const users = response.data
                 this.setState(
