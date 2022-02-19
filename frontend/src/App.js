@@ -4,23 +4,6 @@ import TodoList from './components/Todo.js'
 
 import axios from 'axios'
 
-// import ProjectList from './components/Project.js'
-// import PtuList from './components/Ptu.js'
-// import UserTodoList from './components/UserTodo.js'
-// import ProjectUserList from './components/ProjectUser.js'
-// import TodoIdProjectList from './components/TodoPjUsers.js'
-// import {HashRouter, Route, Link, Switch, Redirect} from 'react-router-dom'
-// import LoginForm from './components/Auth.js'
-// import Cookies from 'universal-cookie';
-// import TodoForm from "./components/TodoForm";
-
-// const NotFound404 = ({location}) => {
-//     return (
-//         <div>
-//             <h1>Страница по адресу '{location.pathname}' не найдена</h1>
-//         </div>
-//     )
-// }
 
 
 class App extends React.Component {
