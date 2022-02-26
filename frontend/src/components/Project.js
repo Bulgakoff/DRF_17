@@ -15,6 +15,7 @@ const ProjectItem = ({item}) => {
 const ProjectList = ({items}) => {
     return (
         <table>
+            <h1>О проекте :</h1>
             <tr>
                 <th>ID</th>
                 <th>name</th>

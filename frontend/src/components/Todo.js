@@ -21,6 +21,7 @@ const TodoList = ({items, deleteTodo}) => {
 return (
     <div>
         <table>
+            <h1>О задачах :</h1>
             <tr>
                 <th>ID</th>
                 <th>text</th>
