@@ -9,7 +9,7 @@ const TodoItem = ({item, deleteTodo}) => {
             {/*<td><Link to={`todo/${item.id}`}>{item.id}</Link></td>*/}
             <td>{item.text}</td>
             <td>{item.created_at}</td>
-            <td>{item.username}</td>
+            <td>{item.user_id.username}</td>
             <td></td>
         </tr>
     )
