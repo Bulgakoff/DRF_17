@@ -1,9 +1,10 @@
 import React from 'react'
 import UserList from './components/User.js'
 import TodoList from './components/Todo.js'
+import PtuList from "./components/Ptu.js";
+import ProjectList from "./components/Project.js";
 
 import axios from 'axios'
-
 
 
 class App extends React.Component {
@@ -38,8 +39,8 @@ class App extends React.Component {
             // 'ptus': ptus
             'users': [],
             'todoes': [],
-            // 'projects': [],
-            // 'ptus': []
+            'projects': [],
+            'ptus': []
         }
     }
 
@@ -48,10 +49,27 @@ class App extends React.Component {
             .then(response => {
                 const users = response.data
                 this.setState(
-                    {
-                        'users': users
-                    }
+                    {'users': response.data}
                 )
+            }).catch(error => console.log(error))
+        axios.get('http://127.0.0.1:8000/viewsets_api/todo_base/')
+            .then(response => {
+                console.log(response.data)
+                this.setState({todoes: response.data})
+            }).catch(error => console.log(error))
+
+
+        axios.get('http://127.0.0.1:8000/viewsets_api/pj_base/')
+            .then(response => {
+                console.log(response.data)
+                this.setState({projects: response.data})
+            }).catch(error => console.log(error))
+
+
+        axios.get('http://127.0.0.1:8000/viewsets_api/pj_to_users_base/')
+            .then(response => {
+                console.log(response.data)
+                this.setState({ptus: response.data})
             }).catch(error => console.log(error))
     }
 
@@ -60,7 +78,9 @@ class App extends React.Component {
         return (
             <div className="App">
                 <UserList items={this.state.users}/>
-                {/*<TodoList items={this.state.todoes}/>*/}
+                <TodoList items={this.state.todoes}/>
+                <ProjectList items={this.state.projects}/>
+                <PtuList items={this.state.ptus}/>
             </div>
         )
     }

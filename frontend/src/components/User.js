@@ -16,6 +16,7 @@ const UserItem = ({item}) => {
 const UserList = ({items}) => {
     return (
         <table>
+            <h1>О пользователях :</h1>
             <tr>
                 <th>ID</th>
                 <th>NAME</th>

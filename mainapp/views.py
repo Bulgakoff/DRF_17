@@ -24,7 +24,7 @@ class TodoViewSet(viewsets.ModelViewSet):
     queryset = ToDo.objects.all()
 
 
-# ==============Project===============================
+# ==============Project================================
 class ProjectViewSet(viewsets.ModelViewSet):
     # permission_classes = [AllowAny]
     serializer_class = ProjectModelSerializer
